@@ -1,0 +1,14 @@
+image:
+  - Visual Studio 2017
+
+clone_folder: c:\projects\source
+
+build_script:
+- cmd: >-
+    cd c:\projects\source
+    git submodule update --init --recursive
+    cmake .. -G "Visual Studio 15" -DCMAKE_INCLUDE_PATH=c:\projects\source\include
+    cmake --build . --config "Release"
+
+artifacts:
+- path: 'bld\Release\myhttpserver.exe'
