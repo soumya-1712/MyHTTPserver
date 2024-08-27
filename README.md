@@ -1,6 +1,6 @@
 # My HTTP Server
 
-A simple HTTP server implementation in C++.
+The project 'Myhttpserver' is a lightweight HTTP server developed in C++, offering support for HTTP/1.1 with basic request handling capabilities (GET, POST, PUT, DELETE) and efficient file serving.
 
 ## Table of Contents
 - [Introduction](#introduction)
