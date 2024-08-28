@@ -5,27 +5,30 @@ project(myhttpserver)
 find_package(OPENGL REQUIRED)
 
 set(FILES
-    filesystemrequesthandler.cpp
-    filesystemrequesthandler.h
-    helprequesthandler.cpp
-    helprequesthandler.h
-    httpserver.cpp
-    httpserver.h
-    httprequest.cpp
-    httprequest.h
-    httpresponse.cpp
-    httpresponse.h
-    httputility.h
+    RequestForFile.cpp
+    RequestForFile.h
+    Help.cpp
+    Help.h
+    Server.cpp
+    Server.h
+    Request.cpp
+    Request.h
+    Response.cpp
+    Response.h
+    HttpUtil.h
     main.cpp
     mimetypes.cpp
     mimetypes.h
-    stringrequesthandler.cpp
-    stringrequesthandler.h
-   
+    RequestForString.cpp
+    RequestForString.h
     )
 
 add_executable(myhttpserver WIN32 ${FILES})  
 
+target_include_directories(myhttpserver  
+    PRIVATE libs/system.io/include
+    PRIVATE libs/imgui
+    )
 
 target_compile_features(myhttpserver  
     PRIVATE cxx_auto_type
